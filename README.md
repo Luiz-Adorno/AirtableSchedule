@@ -5,7 +5,7 @@
 **~4 hours total**
 
 You can verify the approximate timeline of work progression by checking the **commit timestamps** in the Git history,  
-which reflect each completed stage (Etapas 1–5).
+which reflect each completed stage.
 
 ---
 
