@@ -26,9 +26,8 @@ fun TimelineScreen(
     viewModel: TimelineViewModel = viewModel()
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
-    val lanes = viewModel.buildLanes(uiState.events)
 
-    TimelineView(lanes)
+    TimelineView(lanes = uiState.lanes)
 }
 
 //Displays the timeline with multiple lanes.
@@ -84,7 +83,7 @@ private fun EventBlock(event: Event) {
         contentAlignment = Alignment.Center
     ) {
         Text(
-            text = event.name,
+            text = event.id.toString(),
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.onPrimaryContainer,
             maxLines = 1,
